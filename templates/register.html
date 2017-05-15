@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<script>
+function authentication(){
+    var raw_username = document.getElementById("username").value;
+    $.ajax({type:'POST', data: {'raw_username': raw_username}
+    });
+};
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h3>ATTENTION:</h3>
+    <p>* Please use a REAL email address or you may not register successfully.</p>
+    <p>* Username can only be set with letters, digits and underscores.</p>
+    <form action="/u/signup/" method="post">
+        {% csrf_token %}
+        <div>
+            {{ reg_form.uid }} <span>{{ reg_form.errors.uid.0 }}</span>
+        </div>
+        <div>
+            {{ reg_form.email }} <span>{{ reg_form.errors.email.0 }}</span><br>
+        </div>
+        <div>
+            {{ reg_form.pwd }} <span>{{ reg_form.errors.pwd.0 }}</span>
+        </div>
+        <div>
+            {{ reg_form.re_pwd }} <span>{{ reg_form.errors.re_pwd.0 }}</span>
+        </div>
+        <div>
+            {{ reg_form.sec_q }} <span>{{ reg_form.errors.sec_q.0 }}</span>
+        </div>
+        <div>
+            {{ reg_form.sec_a }} <span>{{ reg_form.errors.sec_a.0 }}</span>
+        </div>
+        <div>
+            Your default avatar: <br>
+            <img src="{% static '/img/icon.png' %}">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

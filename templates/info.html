@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>msg</title>
+</head>
+<body>
+    <h1>{{ msg }}</h1>
+    <br>
+    {% if not_activate %}
+    <a href="/u/activation_mail_send/{{ uid }}/">Activate</a>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+    <!--<img src="{{ user.avatar_url }}">-->
+    <a href="/u/signout/">Sign Out</a>
+    <a href="/u/self_profile/">Profile</a>
+    <a href="/u/mod_pwd/">Modify Password</a>
+    {% endif %}
+    <br>
+    <a href="javascript:history.back(-1);">Return</a>
+</body>
+</html>
