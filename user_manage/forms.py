@@ -20,7 +20,6 @@ class RegisterForm(forms.Form):
     sec_a = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Answer'}),
                             required=True,
                             error_messages={'required': 'this field cannot be empty'})
-    avatar = forms.ImageField(widget=forms.ImageField())
 
 class FindPasswordForm(forms.Form):
     sec_a = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Answer'}))
