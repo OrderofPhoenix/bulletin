@@ -5,7 +5,8 @@
     <title>Index</title>
 </head>
 <body>
-    <form action="/u/signin/" method="post">
+    <h1>Index</h1>
+    <form action="/signin/" method="post">
         {% csrf_token %}
         <div class="form-group">
             {{ login_form.uid }}
@@ -15,9 +16,9 @@
         </div>
         <button type="submit">Sign In</button>
         <br>
-        <a href="/u/signup/">Sign Up</a>
+        <a href="/signup/">Sign Up</a>
         <br>
-        <a href="/u/verify_uid/">Reset Password</a>
+        <a href="/verify_uid/">Reset Password</a>
     </form>
 </body>
 </html>

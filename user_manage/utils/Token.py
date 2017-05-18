@@ -1,5 +1,8 @@
 from itsdangerous import URLSafeTimedSerializer as usts
 import base64
+
+# generate verify key
+
 class Token():
     def __init__(self, security_key):
         self.security_key = security_key

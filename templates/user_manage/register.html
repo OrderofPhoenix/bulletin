@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load staticfiles %}
-<script>
-function authentication(){
-    var raw_username = document.getElementById("username").value;
-    $.ajax({type:'POST', data: {'raw_username': raw_username}
-    });
-};
-</script>
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-</head>
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block subject %}Register{% endblock %}
+{% block content %}
 <body>
     <h3>ATTENTION:</h3>
     <p>* Please use a REAL email address or you may not register successfully.</p>
     <p>* Username can only be set with letters, digits and underscores.</p>
-    <form action="/u/signup/" method="post">
+    <p>* Newly-registered account must be activated before use.</p>
+    <form action="/signup/" method="post">
         {% csrf_token %}
         <div>
             {{ reg_form.uid }} <span>{{ reg_form.errors.uid.0 }}</span>
@@ -39,4 +30,4 @@ function authentication(){
         <button type="submit">Submit</button>
     </form>
 </body>
-</html>
+{% endblock %}

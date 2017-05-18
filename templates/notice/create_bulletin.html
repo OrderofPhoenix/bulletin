@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Bulletin</title>
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+    <form action="/n/create_bulletin/" method="post">
+        {% csrf_token %}
+        <div>
+            <input type="hidden" name="creator" value="{{ request.user.username }}">
+        </div>
+        <div>
+            {{ b_form.name }}
+        </div>
+        <div>
+            {{ b_form.description }}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    {% else %}
+        <h2>Please <a href="/u/signin/">sign in</a>!</h2>
+    {% endif %}
+</body>
+</html>

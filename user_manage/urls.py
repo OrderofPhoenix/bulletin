@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^find_pwd/$', views.find_password, name='findpwd'),
     url(r'^mod_pwd/$', views.modify_password, name='modpwd'),
     url(r'^verify_uid/$', views.verify_uid, name='verifyuid'),
-    url(r'^activation_mail_send/(?P<username>\w+)/$', views.activate_mail_send, name='activationmailsend'),
+    url(r'^activation_mail_send/(?P<username>\w+[-+.]?\w+)/$', views.activate_mail_send, name='activationmailsend'),
     url(r'^activate=(?P<token>\w+.[-_\w]*\w+.[-_\w]*\w+)/$', views.activate, name='activate')
 ]

@@ -7,6 +7,7 @@ from django.db import models
 class User(User):
     security_question = models.CharField(max_length=256, default='')
     security_answer = models.CharField(max_length=256, default='')
+
     def __unicode__(self):
         return self.username
 

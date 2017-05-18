@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Info{% endblock %}
+{% block content %}
+<body>
+    <h1>{{ msg }}</h1>
+    {% if not_activate %}
+    <a href="/activation_mail_send/{{ uid }}/">Activate</a>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+    <!--<img src="{{ user.avatar_url }}">-->
+    <hr>
+    <a href="/signout/">Sign Out</a>
+    <br>
+    <a href="/self_profile/">Profile</a>
+    <br>
+    <a href="/mod_pwd/">Modify Password</a>
+    <hr>
+    <a href="/n/create_bulletin/">Create Bulletin</a>
+    <br>
+    <a href="/n/browse_bulletins/">Browse Bulletin</a>
+    <br>
+    <a href="/n/search_bulletin/">Search Bulletin</a>
+    <br>
+    <a href="/n/my_bulletin/">My Bulletin</a>
+    {% endif %}
+    <br><br>
+    <a href="/u/">Return</a>
+</body>
+{% endblock %}

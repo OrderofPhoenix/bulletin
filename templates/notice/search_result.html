@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock %}
+{% block subject %}Search{% endblock %}
+{% block content %}
+<body>
+    <form action="/n/search_bulletin/" method="post">
+        {% csrf_token %}
+        <input type="text" name="keyword" placeholder="enter your keyword">
+        <button type="submit">Search</button>
+    </form>
+    <br>
+    <h2>Search Result</h2>
+    <hr>
+    {% for bulletin in bulletin_list %}
+    <div>
+        <a href="/n/browse_notices/{{ bulletin.pk }}/">{{ bulletin.name }}</a>
+    </div>
+    {% endfor %}
+    <br>
+</body>
+{% endblock %}

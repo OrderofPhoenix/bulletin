@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Notice Detail{% endblock %}
+{% block subject %}Notice Detail{% endblock %}
+{% block content %}
+<body>
+    <h1>{{ notice.title }}</h1>
+    <h5>posted by {{ notice.author }} at {{ notice.date_created }}</h5>
+    <hr>
+    <p>{{ notice.content }}</p>
+    <hr>
+    <h1>Comments</h1>
+    <form action="/n/notice/{{ notice.pk }}/" method="post">
+        {% csrf_token %}
+        <div>
+            {{ c_form.subject }}
+        </div>
+        <div>
+            {{ c_form.content }}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    {% for comment in comment_list %}
+    <div>
+        <h2>{{ comment.subject }}</h2>
+        {% if request.user.username == comment.author.username %}
+        <a href="">Remove</a>
+        {% endif %}
+        <h5>commented by {{ comment.author }} at {{ comment.date_created }}</h5>
+        <p>{{ comment.content }}</p>
+    </div>
+    <hr>
+    {% endfor %}
+    <br>
+    <br>
+    <a href="/u/">Return</a>
+</body>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Browse Notices{% endblock %}
+{% block subject %}Browse Notices{% endblock %}
+{% block content %}
+<body>
+    {% if request.user.is_authenticated %}
+    {% for notice in notice_list %}
+    <div>
+        <h2>{{ notice.title }}</h2>
+        <h6>by</h6>
+        <h4>{{ notice.author }}</h4>
+        <h6>at {{ notice.date_created }}</h6>
+        {% if notice.author.username == request.user.username %}
+        <a href="/n/delete_notice/{{ notice.pk }}/">Remove Notice</a>
+        {% endif %}
+        <a href="/n/notice/{{ notice.pk }}/">Read More</a>
+    </div>
+    <hr>
+    {% endfor %}
+    {% else %}
+     <h2>Please <a href="/u/signin/">sign in</a>!</h2>
+    {% endif %}
+</body>
+{% endblock %}

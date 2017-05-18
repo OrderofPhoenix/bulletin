@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Post Notice{% endblock %}
+{% block subject %}Post Notice{% endblock %}
+{% block content %}
+<body>
+    {% if request.user.is_authenticated %}
+    <form action="/n/post_notice/{{ bid }}/" method="post">
+        {% csrf_token %}
+        <div>
+            <input type="hidden" name="author" value="{{ request.user.username }}">
+        </div>
+        <div>
+            {{ n_form.title }}
+        </div>
+        <div>
+            {{ n_form.content }}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    {% else %}
+        <h2>Please <a href="/u/signin/">sign in</a>!</h2>
+    {% endif %}
+</body>
+{% endblock %}

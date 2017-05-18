@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Browse Bulletins{% endblock %}
+{% block subject %}Browse Bulletins{% endblock %}
+{% block content %}
+<body>
+    <h1>My Bulletins</h1>
+    <h2>Created Bulletins</h2>
+    {% for bulletin in created_bulletins %}
+    <p>{{ bulletin.name }}</p>
+    {% endfor %}
+    <hr>
+    <h2>Followed Bulletins</h2>
+    {% for bulletin in followed_bulletins %}
+    <p>{{ bulletin.name }}</p>
+    {% endfor %}
+    <hr>
+    <br>
+</body>
+{% endblock %}
