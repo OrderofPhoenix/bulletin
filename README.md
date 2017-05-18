@@ -23,6 +23,7 @@
 ## 如有时间期望实现的功能：
 * 发布公告页面加入MarkDown文本编辑器
 * 注册等页面的表单加入即时验证功能
+* 前端页面语言本地化支持
 ## 几个需要注意的地方：
 * 在改写models中User模型时最好继承AbstractUser对象，否则后面request.user中的用户跟models.user（区别于django.contrib.auth.models.User）
 中的用户不对称，带来一些不必要的麻烦。
