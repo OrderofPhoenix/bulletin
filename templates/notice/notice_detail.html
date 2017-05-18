@@ -24,7 +24,7 @@
     <div>
         <h2>{{ comment.subject }}</h2>
         {% if request.user.username == comment.author.username %}
-        <a href="">Remove</a>
+        <a href="/n/remove_comment/{{ comment.pk }}/">Remove</a>
         {% endif %}
         <h5>commented by {{ comment.author }} at {{ comment.date_created }}</h5>
         <p>{{ comment.content }}</p>
@@ -33,6 +33,5 @@
     {% endfor %}
     <br>
     <br>
-    <a href="/u/">Return</a>
 </body>
 {% endblock %}

@@ -77,7 +77,7 @@ def sign_out(request):
     logout(request)
     return redirect('/signin/')
 
-def verify_uid(request):
+def verify_user(request):
     if request.method == 'POST':
         uid = request.POST.get('verify_account')
         if User.objects.get(username=uid) is not None:
@@ -88,9 +88,9 @@ def verify_uid(request):
             return render(request, 'user_manage/info.html', {'msg': 'user does not exist!'})
     else:
         fp_form = FindPasswordForm()
-        return render(request, 'user_manage/verify_uid.html', {'fp_form': fp_form})
+        return render(request, 'user_manage/verify_user.html', {'fp_form': fp_form})
 
-def find_password(request):
+def reset_password(request):
     if request.method == 'POST':
         fp_form = FindPasswordForm(request.POST)
         if fp_form.is_valid():

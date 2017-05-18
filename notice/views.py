@@ -122,23 +122,36 @@ def unfollow_bulletin(request, bid):
 
 @login_required
 def delete_bulletin(request, bid):
+    user = User.objects.get_by_natural_key(request.user.username)
     bulletin = Bulletin.objects.get(pk=bid)
-    bulletin.delete()
-    return redirect('/n/browse_bulletins/')
+    if bulletin.creator == user:
+        bulletin.delete()
+        return redirect('/n/browse_bulletins/')
+    else:
+        return render(request, 'notice/info.html', {'msg': 'Invalid Request'})
+
 
 @login_required
 def delete_notice(request, nid):
+    user = User.objects.get_by_natural_key(request.user.username)
     notice = Notice.objects.get(pk=nid)
-    bid = notice.bulletin.pk
-    notice.delete()
-    return redirect('/n/browse_notices/'+ str(bid) +'/')
+    if notice.author == user:
+        bid = notice.bulletin.pk
+        notice.delete()
+        return redirect('/n/browse_notices/'+ str(bid) +'/')
+    else:
+        return render(request, 'notice/info.html', {'msg': 'Invalid Request'})
 
 @login_required
 def remove_comment(request, cid):
+    user = User.objects.get_by_natural_key(request.user.username)
     comment = Comment.objects.get(pk=cid)
-    nid = comment.belong_to.pk
-    comment.delete()
-    return redirect('/n/notice/'+ str(nid) +'/')
+    if comment.author == user:
+        nid = comment.belong_to.pk
+        comment.delete()
+        return redirect('/n/notice/'+ str(nid) +'/')
+    else:
+        return render(request, 'notice/info.html', {'msg': 'Invalid Request'})
 
 
 

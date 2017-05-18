@@ -14,6 +14,6 @@ urlpatterns = [
     url(r'^unfollow_bulletin/(?P<bid>[0-9]+)/$', views.unfollow_bulletin, name='unfollow_bulletin'),
     url(r'^delete_bulletin/(?P<bid>[0-9]+)/$', views.delete_bulletin, name='delete_bulletin'),
     url(r'^delete_notice/(?P<nid>[0-9]+)/$', views.delete_notice, name='delete_notice'),
-    url(r'^remove_comment/(?P<nid>[0-9]+)/$', views.remove_comment, name='remove_comment'),
+    url(r'^remove_comment/(?P<cid>[0-9]+)/$', views.remove_comment, name='remove_comment'),
 
 ]

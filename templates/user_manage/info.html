@@ -4,7 +4,12 @@
 <body>
     <h1>{{ msg }}</h1>
     {% if not_activate %}
-    <a href="/activation_mail_send/{{ uid }}/">Activate</a>
+    <h3>Click Activate to send an activation email to your mail.</h3>
+    <h5>You could only sign in your account until you activated it.</h5>
+    <p>NOTE: </p>
+    <p>* The Activation Email will be expired in 30 minutes after being sent.</p>
+    <p>* The activation process may take a few seconds, please wait patiently.</p>
+    <a href="/send_activation_mail/{{ uid }}/">Activate</a>
     {% endif %}
     {% if request.user.is_authenticated %}
     <!--<img src="{{ user.avatar_url }}">-->
@@ -24,6 +29,5 @@
     <a href="/n/my_bulletin/">My Bulletin</a>
     {% endif %}
     <br><br>
-    <a href="/u/">Return</a>
 </body>
 {% endblock %}
