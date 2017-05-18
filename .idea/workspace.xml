@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab00055-8da2-4a2c-95db-7893412d7de4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/browse_bulletins.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/browse_notices.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/create_bulletin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/my_bulletins.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/notice_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/post_notice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/notice/search_result.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user_manage/utils/FormValidate.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/article/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/article/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/article/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/article/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/article/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/article/views.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/article/__init__.py" afterPath="$PROJECT_DIR$/notice/forms.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/article/migrations/__init__.py" afterPath="$PROJECT_DIR$/notice/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/find_password.html" afterPath="$PROJECT_DIR$/templates/user_manage/find_password.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/user_manage/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/info.html" afterPath="$PROJECT_DIR$/templates/user_manage/info.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/modify_password.html" afterPath="$PROJECT_DIR$/templates/user_manage/modify_password.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/register.html" afterPath="$PROJECT_DIR$/templates/user_manage/register.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/verify_uid.html" afterPath="$PROJECT_DIR$/templates/user_manage/verify_uid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phoenix_bulletin/settings.py" afterPath="$PROJECT_DIR$/phoenix_bulletin/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phoenix_bulletin/urls.py" afterPath="$PROJECT_DIR$/phoenix_bulletin/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_manage/admin.py" afterPath="$PROJECT_DIR$/user_manage/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_manage/forms.py" afterPath="$PROJECT_DIR$/user_manage/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_manage/models.py" afterPath="$PROJECT_DIR$/user_manage/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_manage/urls.py" afterPath="$PROJECT_DIR$/user_manage/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_manage/utils/Token.py" afterPath="$PROJECT_DIR$/user_manage/utils/Token.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_manage/views.py" afterPath="$PROJECT_DIR$/user_manage/views.py" />
     </list>
     <ignored path="phoenix_bulletin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="435">
-                <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <first_editor relative-caret-position="270">
+                <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -870,8 +836,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="435">
-            <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
             <folding />
           </first_editor>
           <second_editor>
